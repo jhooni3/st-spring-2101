@@ -15,7 +15,7 @@
         <withJansi>true</withJansi>
         <encoder>
             <charset>UTF-8</charset>
-            <pattern>[%d{HH:mm:ss.SSS}:%highlight(%-5p):%cyan(%c):%-5L] %m%n</pattern>
+            <pattern>[%d{HH:mm:ss.SSS}:%highlight(%-5p):%cyan(%c):%-5L][%thread] %m%n</pattern>
         </encoder>
     </appender>
 

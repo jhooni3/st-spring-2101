@@ -1,9 +1,13 @@
 package com.example.demo.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import java.io.Serializable;
 import java.time.LocalDate;
 
+
+@Data
 public class FwkTransactionHstId implements Serializable {
     @Column
     LocalDate transactionDate;
