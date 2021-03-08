@@ -34,9 +34,9 @@ public class EmbeddedDataSource {
     public DataSource embeddedPrimaryDataSource() {
 
         HikariDataSource ds = new HikariDataSource();
-        ds.setJdbcUrl("jdbc:postgresql://localhost:5432/usa?ssl=false&charset=utf8");
-        ds.setUsername("econ");
-        ds.setPassword("1q2w3e4r");
+        ds.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres?ssl=false&charset=utf8");
+        ds.setUsername("postgres");
+        ds.setPassword("postgres");
         ds.setMinimumIdle(5);
         ds.setMaximumPoolSize(100);
         ds.setIdleTimeout(3000);
@@ -55,8 +55,8 @@ public class EmbeddedDataSource {
 
         HashMap<String, Object> properties = new HashMap<>();
         properties.put("hibernate.default_schema", "public");
-        properties.put("hibernate.hbm2ddl.auto", "none");
-        properties.put("hibernate.ddl-auto", "none");
+        properties.put("hibernate.hbm2ddl.auto", "update");
+        properties.put("hibernate.ddl-auto", "update");
         properties.put("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         properties.put("hibernate.physical_naming_strategy", "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy");
         properties.put("hibernate.cache.use_second_level_cache", false);
